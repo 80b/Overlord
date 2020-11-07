@@ -1,17 +1,17 @@
 # Overlord
 
 
-#Installing
+# Installing
 It's actually really easy -- All you have to do is have Python3 installed.
 
-#Usage
+# Usage
 ```
 python Overlord.py
 ```
 
-#Dependencies
+# Dependencies
 None
 
-#Credits
+# Credits
 Raz - Programmer
 Jesse - helping me fix something
