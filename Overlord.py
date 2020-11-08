@@ -1,8 +1,21 @@
 import os
 
+
+# Define colors
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
 #by raz, dont skid
 def OverlordMenu():
-	print("""
+	print(bcolors.FAIL + """
 
    ___                          __                        __  
  .'   `.                       [  |                      |  ] 
@@ -15,27 +28,20 @@ By: Raz
 
 [1] Exit
 [2] Select the hostname for Overlord
-	""")
+	""" + bcolors.ENDC)
 OverlordMenu()
 select = int(input("Which option?: "))
 
-
-class bcolors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKCYAN = '\033[96m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
+# Declare ina as none so it can define
 ina = None
 
-
+#Make command input
 def cmd():
 	argz = input(bcolors.OKCYAN + ina + "@overlord $ " + bcolors.ENDC)
 	os.system(argz)
+
+# While loop for the command input
+# TODO: add more options
 while select != 1:
 	if select == 2:
 		if ina == None:
