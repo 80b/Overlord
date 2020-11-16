@@ -13,6 +13,11 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
+
+def Info():
+    print("This is a python command line tool created by Raz!")
+    
+
 #by raz, dont skid
 def OverlordMenu():
 	print(bcolors.FAIL + """
@@ -28,6 +33,7 @@ By: Raz
 
 [1] Exit
 [2] Select the hostname for Overlord
+[3] Info
 	""" + bcolors.ENDC)
 OverlordMenu()
 select = int(input("Which option?: "))
@@ -51,3 +57,7 @@ while select != 1:
 
 		else:
 			cmd()
+	if select == 3:
+		Info()
+		OverlordMenu()
+		select = int(input("Which option?: "))
